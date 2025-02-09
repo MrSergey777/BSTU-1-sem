@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Задание 4</title>
+        <style>
+            .grid {
+                display: grid;
+                grid-template-columns: 90px 270px 180px;
+                grid-template-rows: 90px 180px 90px;
+                grid-gap: 10px;
+                margin-left: 65px;
+            }
+            header {
+                grid-column: 2/4;
+                background-color: lime;
+            }
+            nav {
+                grid-row: 1/3;
+                background-color: lime;
+            }
+            a{
+                text-decoration: none;
+            }
+            article {
+                grid-column: 2/3;
+                background-color: lime;
+            }
+            aside {
+                grid-column: 3/4;
+                background-color: lime;
+            }
+            footer {
+                grid-column: 1/4;
+                background-color: lime;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <nav>
+                <a href="first.html">Задание 1</a>
+                <a href="second.html">Задание 2</a>
+                <a href="third.html">Задание 3</a>
+            </nav>
+            <header>Заголовок</header>
+            <article>Ячейка2</article>
+            <aside>Ячейка3</aside>
+            <footer>Ячейка4</footer>
+        </div>
+    </body>
+</html>
