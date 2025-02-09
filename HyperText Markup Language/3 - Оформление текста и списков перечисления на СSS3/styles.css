@@ -1,0 +1,53 @@
+@font-face{
+  font-family:'Carveat';
+  src:url(fonts/Caveat.woff);
+}
+@font-face{
+  font-family:'Exo2';
+src:url(fonts/Exo2.woff);
+}
+@font-face{
+  font-family:'Comfortaa';
+src:url(fonts/Comfortaa.woff);
+}
+ h1 {
+    font-family:'Carveat';
+    text-transform:lowercase;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0;
+    text-shadow:  5px 5px 5px;
+}
+ h2 {
+    font-family:'Exo2';
+    margin-bottom: 1.2em;
+    margin-top: 0.2rem; 
+    text-indent: 25px; 
+    text-align: left;
+}
+ p{
+  font-family:'Comfortaa';
+  text-indent: 25px;
+  text-align: justify;
+  margin: 0; 
+  line-height: 200%; 
+  font-size: 20px;
+ }
+ p::first-letter {
+  font-weight: bold; /* Полужирное начертание */
+  font-size: 45px; /* Размер шрифта */
+  color: white; /* Белый цвет */
+  background-color: hsla(275, 100%, 10%, 1); /* Фон */
+}
+ol li {
+  color: black;
+  font-size: 20px;
+  font-family:'Comfortaa';
+}
+ol.roman {
+  list-style-type: upper-roman;
+}
+ol.roman li::marker {
+  color: blue;
+}
