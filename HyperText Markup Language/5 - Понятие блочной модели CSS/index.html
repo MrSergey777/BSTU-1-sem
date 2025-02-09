@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочная модель</title>
+    <style>
+        body{
+            margin-top: 20px;
+        }
+        div{
+            display: inline;
+            padding: 10px;
+            margin: 10px;
+            font-size: 200%;
+            
+        }
+        p, span, strong, em{
+            margin: 15px;
+            padding: 4px;
+            background-color: #FFA500;
+            border: 1px solid #FF4500;
+        }
+        #first{
+            width: 400px;
+            text-align: center;
+            border: 1px solid #FF7F50;
+        }
+        #second{
+            border: 5px solid red;
+            border-radius: 20px / 40px;
+            box-shadow: inset 2px 2px 8px 8px rgba(0, 0, 0, 0.5);
+        }
+        #third{
+            border: 1px solid #FF6347;
+        }
+    </style>
+</head>
+<body>
+    <div style="border: 5px outset rgb(255,0,0)">R</div>
+    <div style="border: 5px dashed rgb(0,128,0)">G</div>
+    <div style="border: 5px dotted rgb(0,0,255)">B</div>
+    <div style="border: 5px double rgb(0, 255, 255)">C</div>
+    <div style="border: 5px groove rgb(128, 0, 128)">М</div>
+    <div style="border: 5px inset rgb(255, 255, 0)">Y</div>
+    <div style="border: 5px solid rgb(0, 0, 0)">K</div>
+    <p id="first">
+        Pokémon, от англ. Pocket Monster«Карманный  монстр»<span>[1]</span>
+    </p>
+    <p id="second">
+        «Покемон» впервые появился как пара игр,<strong> разработанных студией Game Freak</strong>
+    </p>
+    <p id="third">
+       аниме, <em>пользующееся колоссальным успехом в мире, а также манга, коллекционная карточная игра и прочие .</em>
+    </p>
+</body>
+</html>
