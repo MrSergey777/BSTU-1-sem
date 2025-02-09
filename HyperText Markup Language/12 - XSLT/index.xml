@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<catalog>
+    <cd>
+        <title>Some information 1</title>
+        <people>Any people 1</people>
+        <pakinformation>Block of information 1</pakinformation>
+    </cd>
+    <cd>
+        <title>Some information 2</title>
+        <people>Any people 2</people>
+        <pakinformation>Block of information 2</pakinformation>
+    </cd>
+</catalog>

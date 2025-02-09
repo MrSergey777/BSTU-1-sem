@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="second.xsl"?>
+<students>
+    <student>
+        <name>Иван Иванов</name>
+        <subject>Математика</subject>
+        <grade>3</grade>
+    </student>
+    <student>
+        <name>Мария Петрова</name>
+        <subject>Физика</subject>
+        <grade>9</grade>
+    </student>
+    <student>
+        <name>Алексей Сидоров</name>
+        <subject>Химия</subject>
+        <grade>7</grade>
+    </student>
+    <student>
+        <name>Ольга Смирнова</name>
+        <subject>Биология</subject>
+        <grade>5</grade>
+    </student>
+</students>
