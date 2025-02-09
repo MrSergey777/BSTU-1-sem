@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="1.css"?>
+<!DOCTYPE TEST [
+    <!ELEMENT TEST (NAME, INFORMATION)>
+    <!ELEMENT NAME (#PCDATA)>
+    <!ELEMENT INFORMATION (#PCDATA)>
+    <!ENTITY author "DENIS">
+    <!ENTITY info "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsam eaque aliquam velit quam commodi porro distinctio quo voluptatum sit, deleniti officia, culpa praesentium? Soluta inventore quidem beatae eos voluptate!">
+]>
+<TEST>
+    <NAME>&author;</NAME>
+    <INFORMATION>&info;</INFORMATION>
+</TEST>
