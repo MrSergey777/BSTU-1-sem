@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+    <style>
+        @import url(c.css)(max-width: 768p);
+        .wrapper {
+            height: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 1200px;
+            height: auto;
+            align-items: center;
+        }
+        
+        .inWrapper {
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: auto;
+            height: 50px;
+            border: 1px solid black;
+        }
+        
+        .cols {
+            display: flex;
+            flex-wrap: wrap;
+            width: auto;
+            justify-content: space-between;
+        }
+        
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            flex-wrap: wrap;
+            width: 30%;
+            border: 1px solid black;
+        }
+        .gallery { display: flex; flex-wrap: wrap; justify-content: space-around; } 
+        .gallery-item { margin: 10px; text-align: center; } 
+        .gallery-item img { max-width: 100%; height: auto; } 
+        .gallery-item p { font-size: 16px; } 
+         @media (max-width: 480px) { .gallery-item { width: 100%; } .gallery-item p { font-size: 12px; } } 
+         @media (max-width: 768px) { .gallery-item { width: 48%; } .gallery-item p { font-size: 14px; } } 
+         @media (max-width: 1280px) { .gallery-item { width: 30%; } .gallery-item p { font-size: 16px; }}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="inWrapper">
+            <header>Заголовок 1</header>
+            <div class="cols">
+                <section>Ячейка 2</section>
+                <section>Ячейка 3</section>
+                <section>Ячейка 4</section>
+            </div>
+        </div>
+    </div>
+    <div class="gallery"> 
+        <div class="gallery-item"> <img src="2.jpg" alt="Photo 1"> <p>Надпись 1</p> </div>
+         <div class="gallery-item"> <img src="3.jpg" alt="Photo 2"> <p>Надпись 2</p> </div> 
+         <div class="gallery-item"> <img src="5.jpg" alt="Photo 3"> <p>Надпись 3</p> </div> 
+         <div class="gallery-item"> <img src="7.jpg" alt="Photo 4"> <p>Надпись 4</p> </div>
+</body>
+</html>

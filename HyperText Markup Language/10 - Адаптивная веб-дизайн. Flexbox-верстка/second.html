@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #menu-mobile {
+        display: none;
+        }
+        .main-menu {
+        display: none;
+        padding: 0;
+        margin: 0;
+        }
+        .main-menu li {
+        font-size: 16px;
+        font-weight: 700;
+        display: block;
+        width: 100%;
+        }
+        .main-menu a {
+        display: block;
+        color: black;
+        
+        padding: .5em;
+        text-decoration: none;
+        }
+        .main-menu a:hover {
+        text-decoration: underline;
+        }
+        .toggle-button {
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px 20px;
+        color: black;
+        width: 20%;
+        }
+        #menu-mobile:checked + nav .main-menu {
+        display: block;
+        }
+        
+        @media screen and (min-width: 640px) {
+        .toggle-button {
+        display: none;
+        }
+        .main-menu {
+        display: block;
+        margin: 0 auto;
+        padding: 0 15%;
+        height: 60px;
+        }
+        
+        .main-menu li {
+        width: calc(100% / 4);
+        text-align: center;
+        display: inline-block;
+        margin-right: -4px;
+        padding-top: 10px;
+        }
+        .main-menu a {
+        display: inline-block;
+        margin-right: -4px;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        color: black;
+        text-transform: capitalize;
+        border-bottom: 0;
+        }
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="menu-mobile" />
+        <nav role="navigation">
+        <label for="menu-mobile" class="toggle-button" onclick>Задания</label>
+        <ul class="main-menu">
+        <li><a href="firrst.html">Задание 1</a></li>
+        <li><a href="third.html">Задание 3</a></li>
+        <li><a href="#">Задание 4</a></li>
+        </ul>
+        </nav>
+        </header>
+</body>
+</html>
