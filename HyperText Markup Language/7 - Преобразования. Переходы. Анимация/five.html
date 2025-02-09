@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+            padding: 10px;
+        }
+        .first{
+            animation: first 5s linear infinite;
+        }
+        @keyframes first {
+            0%, 20% { transform: translateX(0px); }
+            20%, 40% { transform: translateX(50px); }
+            40%, 60% { transform: translateX(100px); }
+            60%, 80% { transform: translateX(150px); }
+            80%, 100% { transform: translateX(200px); }
+        }
+        .second{
+            animation: second 5s linear infinite;
+        }
+        @keyframes second {
+            0%, 20% { transform: translateY(0px); }
+            20%, 40% { transform: translateY(50px); }
+            40%, 60% { transform: translateY(100px); }
+            60%, 80% { transform: translateY(150px); }
+            80%, 100% { transform: translateY(200px); }
+        }
+        .third {
+    position: relative; 
+    animation: third 5s linear infinite;
+}
+        @keyframes third {
+            0% { top: 0; left: 0; }
+            25% { top: 0; left: 200px; }
+            50% { top: 200px; left: 200px; }
+            75% { top: 200px; left: 0; }
+            100% { top: 0; left: 0; }
+        }
+    .truethird{
+        animation: truethird 5s linear infinite;
+    }
+    @keyframes truethird {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(10px, 20px); }
+            50% { transform: translate(200px, 0); }
+            75% { transform: translate(100px, -70px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Задание 6</h1>
+       <div class="first"><img src="xom.png"></div>
+       <div class="second"><img src="xom.png" class="img2"></div>
+       <div class="truethird"><img src="xom.png" class="img3"></div>
+       <div class="third"><img src="xom.png" class="img4"></div>
+</body>
+</html>

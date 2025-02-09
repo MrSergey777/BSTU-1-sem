@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+           display: inline;
+          
+        }
+        img{
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+        }
+        .img1{
+            transform:perspective(250px) rotateX(250deg);
+            margin-bottom: 100px;
+            margin-left: 50px;
+        }
+        .img2{
+            transform:perspective(250px) rotateY(250deg);
+            margin-bottom: 100px;
+            margin-left: 50px;
+        }
+        .img3{
+            transform:perspective(250px) rotateX(70deg);
+            margin-bottom: 100px;
+            margin-left: 50px;
+        }
+        .img4{
+            transform:perspective(250px) rotateY(-70deg);
+            margin-bottom: 100px;
+            margin-left: 50px;
+        }
+        .div1 {
+        width: 200px;
+        height: 200px;
+        color: blue;
+        transition: color 20s linear;
+    }
+.div1:hover {
+    color: green;
+}
+        .anh {
+    animation: fade 4s infinite alternate;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="anh">Задание 6</h1>
+    <div>
+        <img src="xom.png" alt="img1" class="img1">
+        <img src="xom.png" class="img2">
+        <img src="xom.png" class="img3">
+        <img src="xom.png" class="img4">
+    </div>
+    <div class="div1">
+        <p>Синий-зелёный</p>
+    </div>
+</body>
+</html>

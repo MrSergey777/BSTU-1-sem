@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+           display: inline;
+        }
+        img{
+            width: 300px;
+        }
+        .img1:hover{
+            transform: scale(0.5);
+        }
+        .img2{
+            transform: rotate(-20deg);
+        }
+        .img3{
+            transform: translate(100px,0px);
+        }
+        .img4:hover{
+            margin: auto;
+            padding: auto;
+            transform: rotate(45deg);
+        }
+        .anh {
+    animation: fade 4s infinite alternate;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="anh">Задание 6</h1>
+    <div>
+        <img src="xom.png" alt="img1" class="img1">
+        <img src="xom.png" class="img2">
+        <img src="xom.png" class="img3">
+        <img src="xom.png" class="img4">
+    </div>
+</body>
+</html>
