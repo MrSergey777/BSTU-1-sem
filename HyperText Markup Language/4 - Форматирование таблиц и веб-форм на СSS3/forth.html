@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        form{
+            background-color: indigo;
+        }
+        h2{
+            color: aliceblue;
+        }
+        label{
+            color: aliceblue;
+            display: block;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        input[type="text"]{
+            background-color: rgba(255,255,255,.5);
+            box-shadow: inset 0 0 10px rgba(255,255,255, .75);
+            color: rgba(255,255,255,1);
+            border-radius: 5px;
+        }
+        button{
+            background-color: navy;
+            box-shadow: 0 0 4px white;
+            color: aliceblue;
+        }
+        .text-input:focus {
+            background-color: white;
+            color: black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h2>Регистрация постоянного клиента</h2>
+        <label>Фамилия<input style="margin-left: 100px;" type="text" class="text-input"></label>
+        <label>Имя<input style="margin-left: 140px;" type="text" class="text-input"></label>
+        <label>Отчество<input style="margin-left: 100px;" type="text" class="text-input"></label>
+        <label>Ваш возраст<input style="margin-left: 75px;" type="text"class="text-input"></label>
+        <label>Пол <input style="margin-left: 140px;" type="checkbox">мужской <input style="margin-left: 20px;" type="checkbox">женский </label>
+        <label>Email<input style="margin-left: 130px;" type="text"></label>
+        <label>Страна Проживания<input style="margin-left: 10px;" type="text" class="text-input"></label>
+        <label>Откуда вы узнали о нас<span style="margin-left: 10px;"class="text-input"><select>
+            <option>Выберете вариант</option>
+            <option> Реклама</option>
+            <option> От знакомых</option>
+            <option> по телефону</option>
+            </select></label>
+        <label>дата заполнения<input style="margin-left: 50px;" type="date"></label>
+        <label><button style="margin-left: 156px;">Регистрация<button style="margin-left: 27px;">Отмена</button></button></label>
+    </form>
+</body>
+</html>
