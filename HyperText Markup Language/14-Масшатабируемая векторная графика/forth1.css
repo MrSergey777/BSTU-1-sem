@@ -1,0 +1,28 @@
+.icon1 {
+    fill: green;
+    transform: rotate(45deg);
+}
+
+.icon2 {
+    fill: yellow;
+    transform: rotate(80deg);
+}
+
+.icon3 {
+    fill: blue;
+    transform: scale(1.5);
+}
+
+.icon4 {
+    fill: red;
+    transform: translate(20px, 20px);
+}
+
+.icon5 {
+    fill: purple;
+    transform: skewX(20deg);
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}

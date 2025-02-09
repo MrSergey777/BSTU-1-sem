@@ -1,0 +1,48 @@
+.large-blue-text {
+    font-size: large;
+    color: blue;
+}
+
+.italic-black-text {
+    font-style: italic;
+    color: black;
+    font-size: 125%;
+}
+
+.blueviolet-text {
+    font-size: 120%;
+    color: blueviolet;
+    font-style: normal;
+}
+.large-text {
+    font-size: 120%;
+}
+.svg-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.circle1 {
+    fill: red;
+    transition: fill 0.3s;
+}
+
+.circle2 {
+    fill: green;
+    transition: fill 0.3s;
+}
+
+.circle3 {
+    fill: blue;
+    transition: fill 0.3s;
+}
+
+.circle4 {
+    fill: yellow;
+    transition: fill 0.3s;
+}
+
+circle:hover {
+    fill: orange;
+}
