@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            overflow: hidden; 
+        }
+        .fot4 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 150px; 
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <img src="im.jfif" class="fot4">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        function animateImage() {
+            $(".fot4").animate({left: '+=80%', top: '+=40%'}, 2000)
+                .animate({left: '+=80%', top: '-=40%'}, 2000)
+                .animate({left: '-=160%', top: '+=80%'}, 2000)
+                .animate({left: '0px', top: '0px'}, 2000);
+        }
+        animateImage();
+    </script>
+</body>
+</html>

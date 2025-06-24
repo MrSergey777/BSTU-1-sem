@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Задание 1
+        console.log("Задание 1");
+        let object = {
+            ima : "Имя",
+            fam : "Фамилия",
+            Otch : "Очество",
+        }
+        console.log(Object.values(object));
+        console.log(Object.keys(object));
+        //Задание 2
+        console.log("Задание 2");
+        let formatted = [0, 1, 12, 123, 1234, 12345];
+        console.log(formatted);
+        formatted = formatted.map(num=> 
+        num.toString().padStart(15, '0') ); 
+        console.log(formatted);
+        //Задание 3
+        console.log("Задание 3");
+        let fam ="Воковец";
+        let ima ="Сергей";
+        let age = 18;
+        let s ="";
+        s.toString();
+        fam.toString();
+        ima.toString();
+        numbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100));
+        for(let i=0; i<numbers.length;i++){
+         numbers[i] = String.fromCharCode(numbers[i]); 
+         s+=numbers[i];
+        }
+        console.log(fam + age + " "+ s + ima);
+        //Задание 4
+        console.log("Задание 4"); 
+        let chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
+        let strin = chars.join('');
+        strin = strin.padStart(14, '1'); 
+        strin = strin.padEnd(18, ' ');
+        strin+="0";
+        console.log(strin);
+        //Задание 5
+        console.log("Задание 5"); 
+        let person = { name: "Сергей", age: 18, occupation: "Нет", city: "Минск" };
+        let description = `Имя: ${person.name}, Возраст: ${person.age}, Профессия: ${person.occupation}, Город: ${person.city}`;
+        console.log(description);
+        //Задание 6
+let person1 = {};
+Object.defineProperty(person1, 'name', {
+    value: 'Сергей',
+    writable: true,
+    enumerable: true,
+    configurable: true
+});
+
+Object.defineProperty(person1, 'age', {
+    value: 18,
+    writable: true,
+    enumerable: true,
+    configurable: true
+});
+
+Object.defineProperty(person1, 'occupation', {
+    value: 'Нет',
+    writable: true,
+    enumerable: true,
+    configurable: true
+});
+let des = `Имя: ${person1.name}, Возраст: ${person1.age}, Профессия: ${person1.occupation}`;
+console.log(description);
+    </script>
+</body>
+</html>

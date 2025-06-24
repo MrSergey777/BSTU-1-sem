@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div3{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+        div p{
+            border: 3px solid blue;
+            color:blue;
+            font-size: 35px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-radius: 15px;
+        }
+        .div4{
+            display: flex;
+            align-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="div3"><p>Space World Java Script</p></div>
+    <nav>
+    <div id="nav">
+        <div class="menu-item">
+            <p class="pmenu">Сяп forever</p>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 1">Лаб 1</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 2">Лаб 2</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 3">Лаб 3</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 4">Лаб 4</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 5">Лаб 5</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 6">Лаб 6</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 7">Лаб 7</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 8">Лаб 8</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 9-10">Лаб 9-10</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 12">Лаб 11</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 12">Лаб 12</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 13">Лаб 13</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 14">Лаб 14</a></div>
+            <div class="submenu"><a href="C:\Users\ASUS\Desktop\ЛАБЫ\СЯП\лаб 15">Лаб 15</a></div>
+        </div>
+    </div>
+    <footer>
+        <div class="div4">
+            <p class="t2">I'm glad you survived.</p>
+        </div>
+    </footer>
+</nav>
+    <div class="center-button">
+ <button class="button"><a href="indexi.html">Magic</a></button>
+    <script>
+        document.querySelector('.pmenu').addEventListener('click', function() {
+            var submenus = document.querySelectorAll('.submenu');
+            for (var i = 0; i < submenus.length; i++) {
+                submenus[i].style.display = 'block';
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            var target = event.target;
+            if (!target.classList.contains('pmenu') && !target.classList.contains('submenu')) {
+                closeMenu();
+            }
+        });
+
+        function closeMenu() {
+            var submenus = document.querySelectorAll('.submenu');
+            for (var i = 0; i < submenus.length; i++) {
+                submenus[i].style.display = 'none';
+            }
+        }
+        
+    </script>
+</body>
+</html>

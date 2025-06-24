@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Задание 1
+        console.log("Задание 1");
+        console.log(/first.second/s.test('first\nsecond'));
+
+        // Задание 2
+        console.log("Задание 2");
+        let text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sunt iste repudiandae esse harum, deleniti vitae doloremque fuga maxime modi. Cumque suscipit, consequatur itaque architecto deleniti sint optio fuga eum! [u] 
+sicing elit. Accusantium sunt iste repudiandae esse harum, [/u] для замены.`;
+        let regex = /\[u\]([\s\S]*?)\[\/u\]/gs;
+        let result = text.replace(regex, '<u>$1</u>');
+        console.log(result);
+        // Задание 3
+        console.log("Задание 3");
+        let text1 = `<a href=" ">Example</a> <a href="">Another</a>`;
+        let regex1 = /<a\b[^>]*>/gi; 
+        let result1 = text1.replace(regex1, '<u>');
+        console.log(result1);
+        // Задание 4
+        console.log("Задание 4");
+        let str = "firstName, lastName"; 
+        let regex2 = /(\w+), (\w+)/; 
+         let result2 = str.replace(regex2, '$2, $1'); 
+         console.log(result2);
+        //Задание 5
+        console.log("Задание 5");
+        let person = { name: "Сергей", age: 18, city: "Минск", country: "Беларусь" }; 
+        let { name, age, ...rest } = person;
+        console.log(rest);
+        //Задание 6
+        console.log("Задание 6");
+    let updatedPerson = {
+    ...rest,
+    name: "Имя",
+    fam: "Фамилия"
+};
+console.log(updatedPerson);
+    </script>
+</body>
+</html>

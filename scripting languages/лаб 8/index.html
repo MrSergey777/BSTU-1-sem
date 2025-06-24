@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="1">Желтый</div>
+    <div id="2">размер</div>
+    <img id="3" src="dog.jpg">
+    <div id="4">Тут могла быть ваша реклама</div>
+    <img id="5" src="xom.png">
+    <div id="6">Мем (англ. meme, читается как "мим") — это идея, образ или любой другой объект нематериального мира, который передаётся от человека к человеку вербально, невербально, через интернет или как угодно ещё. Мем может видоизменяться внутри носителя, оказывать влияние на него и общество в целом. Если смотреть шире, то существует такой механизм передачи и хранения культурной информации, использующий эгоистичные сущности, пожирающие мозги (мемы) как её переносчик, а людей — как ячейки памяти.</div>
+    <script>
+        //1
+        let s1 = document.getElementById("1");
+        s1.onmouseover = function(){
+            s1.style.color = "yellow";
+        }
+        //2
+        let s2 = document.getElementById("2");
+        s2.onclick = function(){
+            s2.style.fontSize ="50px";
+        }
+        //3
+        let s3 = document.getElementById("3");
+        s3.onclick = function(){
+            s3.src="ddoggy.jfif";
+        }
+        //4
+        let s4 = document.getElementById("4");
+        s4.onclick = function(){
+            s4.innerHTML ='<img id="3" src="dog.jpg">';
+        }
+        //5
+        let s5 = document.getElementById("5");
+        s5.onmouseover = function() {
+            s5.style.width = "150%";
+        }
+        s5.onmouseout = function() {
+            s5.style.width = "10%";
+        }
+        //6
+        let s6 = document.getElementById("6");
+        s6.addEventListener("dblclick", function() {
+         s6.style.border = "10px solid black";
+        });
+    </script>
+</body>
+</html>

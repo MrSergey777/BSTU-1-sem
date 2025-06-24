@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button id="button1">Кнопка 1</button> 
+    <button id="button2">Кнопка 2</button> 
+    <button id="button3">Кнопка 3</button>
+</head>
+<body>
+    <script>
+        //Задание 1
+        let map = new Map();
+        map.set(1,"+375291122334");
+        map.set(2,"+743947394943");
+        map.set(3,"+148589358358");
+        map.set(4,"+459898565968");
+        map.set(5,"+754545834539");
+        let number = prompt("Введите число от одного от пяти в соответствии с нужным номером телефона");
+        number = Number(number);
+        alert(map.get(number));
+        //Задание 2
+        let set = new Set();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(5);
+        console.log(set);
+        console.log("Длина массива Set " + set.size);
+        console.log("Проверка наличия 1 " + set.has(1));
+        console.log("Проверка наличия 2 " + set.has(2));
+        console.log("Проверка наличия 7 " + set.has(7))
+        //Задание 3
+        let proto = { 
+            ima: "Имя",
+            fam: "Фамилия",
+            ot: "Отчество",
+            cout(){
+                console.log(this.fam);
+                 console.log(this.ima); 
+                 console.log(this.ot);
+            }
+         }
+         proto.cout();
+         let proto2 = Object.create(proto);
+         proto2.ima = "Сергей";
+        proto2.cout();
+        //Задание 4
+        let ime = prompt("Введите ваше имя");
+        if (ime === null || ime === " ")
+         { console.log('Привет, аноним'); } 
+         else{ console.log('Привет, ' + ime)};
+        //Заданте 5
+        function attachClickEvent(buttonId) 
+        { 
+            let count = 0; 
+            let button = document.getElementById(buttonId);
+             button.addEventListener('click', (function() { return function() 
+                { count++;
+                 button.textContent = `Кнопка ${buttonId.slice(-1)}:${count}`; }; })()); }
+                     attachClickEvent('button1'); 
+                     attachClickEvent('button2');
+                     attachClickEvent('button3');
+    </script>
+</body>
+</html>

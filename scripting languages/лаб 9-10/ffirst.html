@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Перемещаемое изображение</title>
+    <style>
+        #myimg {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50%;
+        }
+        #tl {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: large;
+        }
+    </style>
+</head>
+<body id="mybody">
+    <textarea id="tl" onmousedown="drag(event)">Это – первый текст</textarea>
+    <img id="myimg" src="zi1.png" onmousedown="drag(event)">
+    <script>
+        let flag = false; // нельзя перемещать
+        let id_img = "";
+
+        function drag(event) {
+            flag = true;
+            id_img = event.target.id;
+        }
+
+        document.getElementById('mybody').onmousemove = function(event) {
+            if (flag) { // если можно перемещать
+                document.getElementById(id_img).style.top = event.clientY + 'px';
+                document.getElementById(id_img).style.left = event.clientX + 'px';
+            }
+        };
+
+        document.getElementById('mybody').onmouseup = function() {
+            flag = false; // нельзя перемещать
+        };
+
+        function resizetext() { // установка размеров текстовых областей
+            var y, size, idtext;
+            for (var i = 0; i < document.all.length; i++) {
+                if (document.all[i].tagName == 'TEXTAREA') {
+                    idtext = document.all[i].id;
+                    y = parseInt(document.all[idtext].style.top);
+                    size = Math.min(y, 800);
+                    size = Math.max(size, 60);
+                    document.all[idtext].style.width = size + 'px';
+                    document.all[idtext].style.height = 0.8 * size + 'px';
+                    document.all[idtext].style.zIndex = y;
+                    document.all[idtext].style.fontSize = Math.max(2, y / 10) + 'px';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

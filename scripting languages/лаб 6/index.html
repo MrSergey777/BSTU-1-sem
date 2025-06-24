@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1px">
+    <button onclick="openWindow1()">Открыть окно 1</button>
+    <button onclick="closeWindow1()">Закрыть окно 1</button>
+    <button onclick="textWindow1()">текст окнa 1</button>
+    <button onclick="openWindow2()">Открыть окно 2</button>
+    <button onclick="closeWindow2()">Закрыть окно 2</button>
+    <button onclick="textWindow2()">текст окнa 2</button>
+    <script>
+        let window1;
+        let window2;
+        function openWindow1() {
+            window1 = window.open();
+            window1.document.write('<p>Это окно 1</p>');
+        }
+
+        function closeWindow1() {
+                window1.close();
+        }
+        function textWindow1(){
+            window1 = window.open();
+            window1.document.write('текст окна 1');
+        }
+        //
+        function openWindow2() {
+            window2 = window.open();
+            window2.document.write('Это окно 2');
+        }
+
+        function closeWindow2() {
+                window2.close();
+        }
+        function textWindow2(){
+            window2 = window.open();
+            window2.document.write('текст окна 2');
+        }
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'Свойство' + '<td>');
+        document.write('<td>'+ 'Значение' + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'userAgent' + '<td>');
+        document.write('<td>'+ navigator.userAgent + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'appVersion' + '<td>');
+        document.write('<td>'+ navigator.appVersion + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'appName' + '<td>');
+        document.write('<td>'+ navigator.appName + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'appCodeName' + '<td>');
+        document.write('<td>'+ navigator.appCodeName + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'platform' + '<td>');
+        document.write('<td>'+ navigator.platform + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'javaEnabled()' + '<td>');
+        document.write('<td>'+ navigator.javaEnabled() + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'width' + '<td>');
+        document.write('<td>'+ screen.width + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'height' + '<td>');
+        document.write('<td>'+ screen.height + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'height' + '<td>');
+        document.write('<td>'+ screen.height + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'colorDepth' + '<td>');
+        document.write('<td>'+ screen.colorDepth + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'length' + '<td>');
+        document.write('<td>'+ history.length + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'href' + '<td>');
+        document.write('<td>'+ location.href + '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'pathnam' + '<td>');
+        document.write('<td>'+ location.pathname+ '<td>');
+        document.write('<tr>');
+        //
+        document.write('<tr>');
+        document.write('<td>'+ 'host' + '<td>');
+        document.write('<td>'+ location.hostname + '<td>');
+        document.write('<tr>');
+    </script>
+    </table>
+</body>
+</html>

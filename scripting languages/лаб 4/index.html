@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num =2;
+        let spec = 'ИСИТ';
+        let kol = 35;
+        let n,k;
+       let Gruppa = {
+          num,
+          spec,
+          kol,
+          sub_stud(n){
+            this.kol-=n;
+          },
+          add_stud(k){
+            this.kol+=k;
+          }
+       }
+       Gruppa.sub_stud(9);
+    document.write(Gruppa.kol, "\n");
+       Gruppa.add_stud(150);
+       document.write(Gruppa.kol, "\n");
+       function createGruppa(num, spec, kol) {
+            let newGruppa = Object.create(Gruppa);
+            newGruppa.num = num;
+            newGruppa.spec = spec;
+            newGruppa.kol = kol;
+            return newGruppa;
+        }
+        let gr2 = createGruppa(5, 'ИСИТ', 30);
+        let gr3 = createGruppa(6, 'ПИ', 25);
+        let gr4 = createGruppa(7, 'ЦД', 20);
+        gr2.add_stud(5);  
+        gr3.sub_stud(3);
+        gr4.add_stud(10);
+        //Задание 2
+        let ima = 'Сергей';
+        let fa = 'Волковец';
+        let fis = 9;
+        let mat = 9;
+        let inf = 10;
+        let sp = '-';
+        let cr = (fis + mat + inf) / 3;
+        let student = {
+            ima,
+            fa,
+            fis,
+            mat,
+            inf,
+            cr,
+            sp,
+            cout (){
+              alert(`${this.ima},${this.fa},${
+              .fis},${this.mat}`);
+          },
+          sr (){
+            document.write((this.fis + this.mat + this.inf) / 3);
+          }
+        }
+          student.cout();
+          student.sr();
+         function createGruppa1(ima, fa, fis,mat,inf,sp) {
+            let newGruppa1 = Object.create(student);
+            newGruppa1.ima= ima;
+            newGruppa1.fa= fa;
+            newGruppa1.fis= fis;
+            newGruppa1.mat = mat;
+            newGruppa1.inf = inf;
+            newGruppa1.cr = (fis + mat + inf) / 3;
+            newGruppa1.sp = sp;
+            return newGruppa1;
+        }
+        let s1 = createGruppa1('Костя','Григорьевский', 4,4,4,'пение');
+        let s2 = createGruppa1('Годжу','Сатору', 6,4,8,'Скорость');
+        let s3 = createGruppa1('Ерен','Егерь', 10,7,10,'магия');
+          document.write('\n', s1.ima);
+          document.write('\n', s1.fa);
+          document.write('\n', s1.fis);
+          document.write('\n', s1.mat);
+          document.write('\n', s1.inf);
+          document.write('\n', s1.cr);
+          document.write('\n', s1.sp);
+            //
+            document.write('\n', s2.ima);
+          document.write('\n', s2.fa);
+          document.write('\n', s2.fis);
+          document.write('\n', s2.mat);
+          document.write('\n', s2.inf);
+          document.write('\n', s2.cr);
+          document.write('\n', s2.sp);
+          //
+          document.write('\n', s3.ima);
+          document.write('\n', s3.fa);
+          document.write('\n', s3.fis);
+          document.write('\n', s3.mat);
+          document.write('\n', s3.inf);
+          document.write('\n', s3.cr);
+          document.write('\n', s3.sp);
+          //Задание 3
+          let arr = [1,2,3,4,5];
+          document.write('\n', arr)
+          console.log(...arr);
+          delete arr[2];
+          arr.pop();
+          document.write(...arr);
+          console.log("Имеется ли у массива 2-й элемент:", 2 in arr);
+          console.log( arr instanceof Array);
+          console.log( s3 instanceof Object);
+          let s= "fhrngh";
+          s.toUpperCase();
+          console.log( s instanceof String);
+          function pat() {
+          return 5;
+          }
+          console.log( typeof Gruppa.kol);
+          console.log( typeof Gruppa.spec);
+          console.log( typeof Gruppa.num);
+          console.log( typeof student.ima);
+          console.log( typeof student.fa);
+          console.log( typeof student.fis);
+          console.log( typeof student.mat);
+          console.log( typeof student.inf);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1px" ; style="color: green;">
+        <script>
+            //ЗАДАНИЕ 1
+            function YRA() {
+                let x = 2;
+                let y = 250;
+                let q = (35 * y - 25 * x) / 5 + 232;
+                let w = (8 * y / x + 5 * x / y - 43) * 6;
+                let ost = q % w;
+                var myText = ost;
+                document.write('<p style="color: green;">' + myText + '</p>');
+            }
+            const yra1 = () => {
+                let x = 2;
+                let y = 250;
+                let q = (35 * y - 25 * x) / 5 + 232;
+                let w = (8 * y / x + 5 * x / y - 43) * 6;
+                let ost = q % w;
+                var myText = ost;
+                document.write('<p style="color: green;">' + myText + '</p>');
+            }
+            //Задание 2
+            let a = parseInt(prompt("Введите число а"));
+            let b = parseInt(prompt("Введите число b"));
+            for (var i = 1; i < b + 2; i++) {
+                document.write('<tr>')
+                if (i == b + 1) {
+                    for (var w1 = 1; w1 < a + 1; w1++) {
+                        document.write('<td>' + w1 + '</td>');
+                    }
+                }
+                else {
+                    for (var q1 = 1; q1 < a + 1; q1++) {
+                        if (q1 == a) {
+                            document.write('<td>' + i + '</td>');
+                        }
+                        else {
+                            document.write('<td>' + i * q1 + '</td>');
+                        }
+                    }
+                }
+                document.write('</tr>');
+            }
+        </script>
+    </table>
+</body>
+
+</html>

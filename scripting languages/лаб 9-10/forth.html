@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form id="functionForm">
+        <label><input type="radio" name="function" value="x2" checked> y = x²</label>
+        <label><input type="radio" name="function" value="x3"> y = x³</label>
+        <label><input type="radio" name="function" value="sin"> y = sin(x)</label>
+        <label><input type="radio" name="function" value="cos"> y = cos(x)</label>
+    </form>
+    <br>
+    <label for="colorPicker">Цвет:</label>
+    <select id="colorPicker">
+        <option value="black">Черный</option>
+        <option value="red">Красный</option>
+        <option value="blue">Синий</option>
+        <option value="green">Зелёный</option>
+    </select>
+    <br><br>
+    <canvas id="graphCanvas" width="600" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('graphCanvas');
+        const ctx = canvas.getContext('2d');
+        const functionForm = document.getElementById('functionForm');
+        const colorPicker = document.getElementById('colorPicker');
+
+        function drawGraph() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.strokeStyle = colorPicker.value;
+
+            const selectedFunction = document.querySelector('input[name="function"]:checked').value;
+            let func;
+
+            switch (selectedFunction) {
+                case 'x2':
+                    func = x => x * x;
+                    break;
+                case 'x3':
+                    func = x => x * x * x;
+                    break;
+                case 'sin':
+                    func = x => Math.sin(x);
+                    break;
+                case 'cos':
+                    func = x => Math.cos(x);
+                    break;
+            }
+
+            for (let x = -canvas.width / 2; x < canvas.width / 2; x++) {
+                const y = func(x / 50) * 50;
+                if (x === -canvas.width / 2) {
+                    ctx.moveTo(x + canvas.width / 2, canvas.height / 2 - y);
+                } else {
+                    ctx.lineTo(x + canvas.width / 2, canvas.height / 2 - y);
+                }
+            }
+
+            ctx.stroke();
+        }
+
+        functionForm.addEventListener('change', drawGraph);
+        colorPicker.addEventListener('change', drawGraph);
+        drawGraph();
+        $(document).ready(function() 
+        { const canvas = $('#graphCanvas')[0]; 
+        const ctx = canvas.getContext('2d'); 
+        function drawGraph()
+         { ctx.clearRect(0, 0, canvas.width, canvas.height); 
+            ctx.beginPath(); ctx.strokeStyle = $('#colorPicker').val();
+             const selectedFunction = $('input[name="function"]:checked').val(); 
+             let func; switch (selectedFunction) {
+                case 'x2': func = x => x * x; break; 
+                case 'x3': func = x => x * x * x; break; 
+                case 'sin': func = x => Math.sin(x); break;
+                 case 'cos': func = x => Math.cos(x); break; }
+                  for (let x = -canvas.width / 2; x < canvas.width / 2; x++)
+                   { const y = func(x / 50) * 50; if (x === -canvas.width / 2)
+                     { ctx.moveTo(x + canvas.width / 2, canvas.height / 2 - y); } 
+                     else { ctx.lineTo(x + canvas.width / 2, canvas.height / 2 - y); } } 
+                     ctx.stroke(); } $('#functionForm input').change(drawGraph); $('#colorPicker').change(drawGraph); drawGraph(); });
+    </script>
+</body>
+</html>

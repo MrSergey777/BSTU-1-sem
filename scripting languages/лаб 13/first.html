@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Задание 1
+        console.log('Задание 1');
+        let numbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100 ));
+        console.log(numbers);
+        console.log(numbers.includes(2));
+        console.log(numbers.includes(3));
+        //Задание 2
+        console.log('Задание 2');
+        numbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100));
+        numbers[2] =NaN;
+        console.log(numbers);
+        console.log(numbers.includes(NaN));
+        console.log(numbers.indexOf(NaN));
+        //Задание 3
+        console.log('Задание 3');
+        let numbers2 = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100));
+        numbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100));
+        for(let i=0; i<numbers.length;i++){
+         numbers[i] = String.fromCharCode(numbers[i]); 
+        }
+        for(let i=0; i<numbers2.length;i++){
+         numbers2[i] = String.fromCharCode(numbers2[i]); 
+        }
+        console.log(numbers);
+        console.log(numbers2);
+        console.log(numbers.includes('a'));
+        console.log(numbers.includes('g'));
+        console.log(numbers2.includes('a'));
+        console.log(numbers2.includes('d'));
+        //Задание 4
+        console.log('Задание 4');
+        let result1 = Math.round(1234 ** 2 * 23 / 5 + 234); console.log(result1); 
+        let result2 = Math.round(28 * 765**2 / 5 * 43**2); console.log(result2); 
+        let result3 = Math.round(3734**6 - (434**6 + 1024**4) / 5); console.log(result3);
+        let result4 = Math.round(6543**35 - 965732); console.log(result4); 
+        let result5 = Math.round((1000**10 + 100000**10) / 10000); console.log(result5);
+    </script>
+</body>
+</html>

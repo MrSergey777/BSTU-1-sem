@@ -1,0 +1,45 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <style>
+        .btn {
+                margin: 5px;
+                font-size: 16px;
+            }
+        
+            </style>
+        </head>
+        <body>
+            <table border="1px"; style="font-family: Arial, Helvetica, sans-serif;">
+            <script>
+                let a1 = parseInt(prompt("Введите число а1"));
+               let b1 = parseInt(prompt("Введите число b"));
+               i = 0;
+            while(a1 < b1){
+                document.write('<tr>')
+                if(i==0){
+                    document.write('<td>' +"Радиус"+ '</td>');
+                    document.write('<td>' +"Площадь круга"+ '</td>');
+                    document.write('<td>' +"Длина окружности"+ '</td>');
+                }
+                else{
+                    dl=2*a1*3.14;
+                    dl=dl.toPrecision(2);
+                    pl=a1*a1*3.14;
+                    pl=pl.toPrecision(2);
+                    a2=a1.toPrecision(2);
+                    document.write('<td>' + a2 + '</td>');
+                    document.write('<td>' +pl+ '</td>');
+                    document.write('<td>' +dl+ '</td>');
+                } 
+                i+=1;
+                a1+=0.3;
+                document.write('</tr>')
+            }
+            </script>
+            </table>
+        </body>
+        </html>

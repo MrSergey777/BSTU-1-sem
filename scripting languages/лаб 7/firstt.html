@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 10px;
+        }
+        button{
+            margin: 20px;
+            width:  80px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <textarea style="width: 240px;">
+            Факультет информационных технологий
+        </textarea>
+        <div><input type="text" placeholder="Имя"></div>
+        <div><input type="text" placeholder="Фамилия"></div>
+        <div style="margin: 10px;">Cпециальность
+            <select style="margin: 12px;">
+                <option>ПОИТ</option>
+                <option>ИСИТ</option>
+                <option>ДЭВИ</option>
+            </select>
+        </div>
+        <div>
+            <p>Курс</p>
+            <input type="radio" value="1">1
+            <input type="radio" value="2">2
+            <input type="radio" value="3">3
+            <input type="radio" value="4">4
+        </div>
+        <div>
+            <p>Предметы</p>
+            <input type="checkbox" name="subjects" value="ОИТ">ОИТ
+            <input type="checkbox" name="subjects" value="ОАП">ОАП
+            <input type="checkbox" name="subjects" value="История">История
+            <input type="checkbox" name="subjects" value="Физика">Физика
+            <input type="checkbox" name="subjects" value="Математика">Математика
+        </div>
+        <div>
+        <button type="reset">reset</button>
+        <button type="submit">sumbit</button>
+    </div>
+    <div><button type="button" onclick="printInf()">Напечатать</button></div>
+        </form>
+    <script>
+       function printInf () {
+            let facname = document.forms[0].elements[0].value;
+            let fam = document.forms[0].elements[2].value;
+            let spec = document.forms[0].elements[3].value;
+            let k = document.forms[0].elements[4].value;
+            let subjects = '';
+            let checkboxes = document.forms[0].elements['subjects'];
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    subjects += '<li>' + checkboxes[i].value + '</li>';
+                }
+            }
+            document.write(facname + '<br>');
+            document.write("Студент " + fam + " специальность " + spec + " курс " + k + " должен сдавать следующие предметы: " +" <br>");
+            document.write("<ul>" + subjects + "</ul>")
+            document.write("<select>");
+            for (let i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    document.write("<option>" + checkboxes[i].value + "</option>");
+                }
+            }
+            document.write("</select>");
+    }
+    </script>
+</body>
+</html>

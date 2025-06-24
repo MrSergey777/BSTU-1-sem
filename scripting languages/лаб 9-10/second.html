@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fot{
+            position: absolute;
+            top: 50px;
+            left: 0;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+    <img src="zi1.png" id="foto" class="fot">
+</head>
+<body>
+    <script>
+        let img = document.getElementById('foto');
+        let position = 0;
+        function dvizh() {
+    position += 5;
+    img.style.left = position + 'px';
+    
+    if (position > window.innerWidth) {
+        clearInterval(interval);
+    }
+}
+let interval = setInterval(dvizh, 50);
+    </script>
+</body>
+</html>

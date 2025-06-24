@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        img {
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="text">Текст</p>
+    <p class="2">Размер шрифта</p>
+    <p class="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ducimus rerum, veritatis sunt corporis hic, ipsum consectetur unde omnis beatae optio est, enim debitis molestias facilis vero corrupti? Mollitia, neque.</p>
+    <img src="dog.jpg" class="ffot">
+    <img src="ddoggy.jfif" class="f1">
+    <p class="t2">текстик</p>
+    <img src="ddoggy.jfif" class="fot2">
+    <img src="dog.jpg" class="fot3">
+    <img src="xom.png" class="fot4">
+
+    <form id="functionForm">
+        <input type="radio" name="function" value="x2" checked> y = x<sup>2</sup><br>
+        <input type="radio" name="function" value="x3"> y = x<sup>3</sup><br>
+        <input type="radio" name="function" value="sin"> y = sin(x)<br>
+        <input type="radio" name="function" value="cos"> y = cos(x)<br>
+    </form>
+    <canvas id="graphCanvas" width="400" height="400"></canvas>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".text").mouseover(function() {
+                $(".text").css("color", "green");
+            }).mouseout(function() {
+                $(".text").css("color", "black");
+            });
+
+            $(".2").click(function() {
+                $(".2").css("font-size", "50px");
+            });
+
+            $(".3").dblclick(function() {
+                $(".3").css("border", "5px solid yellow");
+            });
+
+            $(".ffot").click(function() {
+                $(".ffot").attr("src", "xom.png");
+            });
+
+            $(".f1").mouseover(function() {
+                $(".f1").css("width", "150px");
+            }).mouseout(function() {
+                $(".f1").css("width", "50px");
+            });
+
+            $(".t2").click(function() {
+                $(".t2").html('<img src="dog.jpg">');
+            });
+
+            $(".fot2").animate({left: 500}, 2000);
+            $(".fot3").draggable();
+
+            function animateImage() {
+                $(".fot4").animate({left: '+=100px', top: '+=50px'}, 1000)
+                    .animate({left: '+=100px', top: '-=50px'}, 1000)
+                    .animate({left: '-=200px', top: '+=100px'}, 1000)
+                    .animate({left: '0px', top: '0px'}, 1000);
+            }
+            animateImage();
+            function drawGraph() {
+                const canvas = $('#graphCanvas')[0];
+                const ctx = canvas.getContext('2d');
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.beginPath();
+                ctx.strokeStyle = 'black';
+
+                const selectedFunction = $('input[name="function"]:checked').val();
+                let func;
+
+                switch (selectedFunction) {
+                    case 'x2':
+                        func = x => x * x;
+                        break;
+                    case 'x3':
+                        func = x => x * x * x;
+                        break;
+                    case 'sin':
+                        func = x => Math.sin(x);
+                        break;
+                    case 'cos':
+                        func = x => Math.cos(x);
+                        break;
+                }
+
+                for (let x = -canvas.width / 2; x < canvas.width / 2; x++) {
+                    const y = func(x / 50) * 50;
+                    if (x === -canvas.width / 2) {
+                        ctx.moveTo(x + canvas.width / 2, canvas.height / 2 - y);
+                    } else {
+                        ctx.lineTo(x + canvas.width / 2, canvas.height / 2 - y);
+                    }
+                }
+
+                ctx.stroke();
+            }
+
+            $('#functionForm input').change(drawGraph);
+            drawGraph();
+        });
+    </script>
+</body>
+</html>

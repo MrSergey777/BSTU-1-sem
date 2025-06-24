@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script>
+        //Задание 1
+        alert('Вас приветствует учебный центр');
+        prompt('Введите имя');
+        alert('Добро пожаловать на наши курсы');
+        if (confirm('Хотите стать Web-дизайнером?') == true){
+            alert('Учите стили CSS и JavaScript!');
+        }
+        else{
+            alert('Упускаете время!');
+        }
+        //Задание 2
+        console.log(10 + 5);
+        console.log("10" +"5");
+        document.write(22 + "5\n");
+        document.write("22" + 5);
+        //Задание 3 
+        let x = 2;
+        let y = 250;
+        let q = (35*y - 25*x)/5+232;
+        let w = (8*y/x+5*x/y - 43)*6;
+        let ost = q % w ;
+        document.write(ost);
+        alert(ost);
+        //Задание 4
+        let x1 = 25;
+        if( x1<20 ||( x1 > 40 && x1!=15  && x1 % 5 == 0 )){
+            alert("Правильное значение");
+        }
+        else{
+            alert("не правильное значение");
+        }
+        //Задание 5
+        let xx1 = prompt('Введите первое число А');
+       let xx = prompt('Введите второе число В');
+       if(xx1>xx){
+        alert("А больше В");
+       }
+       else {
+        alert("В больше А");
+       }
+       let aa = 4;
+       if(aa%2==0){
+        alert("Число чётоное");
+       }
+       else {
+        alert("Число нечётоное");
+       }
+       //Задание 6
+       let den = parseInt(prompt("Введите число от 1 до 7:"));
+       switch(den) {
+    case 1: 
+        alert("Понедельник");
+        break;
+    case 2: 
+        alert("Вторник");
+        break;
+    case 3: 
+        alert("Среда");
+        break;
+    case 4: 
+        alert("Четверг");
+        break;
+    case 5: 
+        alert("Пятница");
+        break;
+    case 6: 
+        alert("Суббота");
+        break;
+    case 7: 
+        alert("Воскресенье");
+        break;
+}
+    //Задание 7
+    // Двоичная система счисления (начинается с 0b)
+let binaryNumber = 0b1010;
+
+// Восьмеричная система счисления (начинается с 0o)
+let octalNumber = 0o12;
+
+// Шестнадцатеричная система счисления (начинается с 0x)
+let hexNumber = 0xA;
+// Задание 8
+let a4 = 10;
+let b4 = 0;
+
+try {
+    if (b4 === 0) {
+        throw new Error("Деление на ноль невозможно");
+    }
+    let result = a4 / b4;
+    console.log("Результат: " + result);
+} catch (error) {
+    console.error("Ошибка: " + error.message);
+}
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>

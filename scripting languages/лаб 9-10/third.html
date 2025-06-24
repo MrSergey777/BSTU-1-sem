@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Example</title>
+    <style>
+        img {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img id="foto" src="zi1.png" alt="Animated Image" width="50" height="50">
+    <script>
+        const img = document.getElementById('foto');
+        const startX = 500;
+        const startY = 100;
+        const amplitude = 200;
+        const frequency = 0.01;
+        const duration = 3000;
+        let startTime;
+
+        function animate(time) {
+            if (!startTime) startTime = time;
+            const elapsed = time - startTime;
+
+            // Вычисление текущей позиции
+            const x = startX + elapsed * 0.1; // Скорость движения по оси X
+            const y = startY + amplitude * Math.sin(frequency * x);
+
+            // Установка позиции изображения
+            img.style.left = x + 'px';
+            img.style.top = y + 'px';
+
+            if (elapsed < duration) {
+                requestAnimationFrame(animate);
+            } else {
+                img.style.left = startX + 'px';
+                img.style.top = startY + 'px';
+            }
+        }
+
+        requestAnimationFrame(animate);
+    </script>
+</body>
+</html>
